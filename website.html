@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;        
+          }
+
+        body {       
+        background: url(coffee3.jpeg);
+        background-size: cover;   
+        font-family: Georgia, 'Times New Roman', Times, serif;  
+        height: 100vh;   
+        width: 100%;   
+        background-repeat: no-repeat;               
+        }
+
+
+      .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        }
+
+      .logo img{                
+        width: 50px;
+        height: 50px;
+        }
+
+      .menulink {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 20px;          
+        }
+
+      .menulink a{
+        color: whitesmoke;
+        text-decoration: none;          
+        transition: 0.2s ease;      
+        }
+
+     
+      .menulink a:hover{
+        border: 2px solid black;
+        background:burlywood;
+        border-radius: 15px;
+        padding: 10px;
+        color:black;        
+        }
+      
+
+      p{
+        color: aliceblue;
+        font-size: 40px;
+        margin-left: 5%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding: 5px;
+        }    
+
+      .herosection {
+        height: 100vh;
+        display: flex;
+        padding: 0 20px;
+        align-items: center;
+        }
+
+      
+      .herosection .content h1{
+        color: #fff;    
+        font-size: 3rem;
+        max-width: 600px;    
+        margin-left: 90px;   
+        }
+
+      .herosection .content p{
+        font-weight: 200;
+        margin-top: 15px;
+        max-width: 600px;
+        font-size: 20px;
+        margin-left: 90px;
+        }
+
+      .herosection .content button{
+        border-radius: 6px;
+        padding:10px;
+        color:black;
+        margin-top: 20px;
+        transition: 0.2 ease;
+        margin-left: 90px;        
+        }
+
+      .herosection .content button:hover{
+       background:rgb(209, 125, 16);  
+       color: white;       
+        }         
+
+      .about1,.about3,.about5,.about7{
+        display: flex;
+        align-items: center;
+        gap: 20px;        
+        flex-direction: row-reverse;        
+       }
+
+      .about1 p,.about3 p,.about5 p,.about7 p{
+        font-size: 1.5rem;
+        color: black;               
+       }
+      
+
+      .about1 h1,.about3 h1,.about5 h1,.about7 h1{
+        color: burlywood;
+        font-size: 3rem;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 10px;
+       }
+
+      .about1 img,.about3 img,.about5 img,.about7 img{
+         width: 300px;
+         height: 300px;
+         border-radius: 25px;            
+        }
+
+
+      .about2,.about4,.about6{
+        display: flex;
+        align-items: center;
+        gap: 20px;       
+            
+      }
+
+      .about2 p,.about4 p,.about6 p{
+        font-size: 1.5rem;
+        color: black;               
+      }
+      
+
+      .about2 h1,.about4 h1,.about6 h1{
+        color: burlywood;
+        font-size: 3rem;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .about2 img,.about4 img,.about6 img{
+         width: 300px;
+         height: 300px;
+         border-radius: 25px;            
+        }
+
+      .title{
+        color:black;
+        font-size: 3rem;  
+        font-style: italic;          
+        text-align: center;   
+        margin:40px 0;        
+        transition: 0.2s ease;     
+      }
+
+      .title:hover{
+        color:burlywood;
+        transform: scale(1.1);             
+      }
+
+      h2{
+        margin-top: 50px;
+        text-align: center;        
+        font-size:4rem;
+        font-style: italic;        
+      }
+      
+      h2:hover{
+        transform: scale(1.1);
+        transition: 0.3s;
+        color:rgb(105, 40, 40);    
+      }
+
+      table{
+         margin-top: 100px;
+         border-collapse: collapse;
+         margin: 20px auto;
+         background-color:rgb(131, 77, 7);
+         border-radius:15px;
+         border: 2px solid white;
+         box-shadow: 0 6px 25px rgba(0,0,0,0.6);
+
+      }
+
+      th, td {
+        border: 1px solid whitesmoke;
+        text-align: center;
+        width: 150px;
+        height:150px;
+        font-style: italic;
+        font-weight: 100;
+        color:white;
+        font-weight: 600;        
+        
+      }
+
+      table img{
+        width: 100px;
+        height: 100px;
+        border-radius:8px;
+      }
+
+     tr:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      transform: scale (1.02);
+      transition: 0.3s ease;
+    }
+
+    #PopularMenu {
+      text-align: center;     
+      font-size: 24px;        
+      color: brown;     
+      margin-top: 10%;     
+      font-size: 3rem; 
+    }
+
+    #PopularMenu:hover{    
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+    
+    .PopularCoffee > div {
+      margin-top: 5%;
+      display: flex;
+      justify-content: center; 
+      gap: 30px;      
+    }
+
+    .Popularimg {
+      text-align: center;
+      margin: 20px;
+      border: 2px solid brown;
+      padding: 10px;
+      border-radius: 10px;      
+    }
+
+    .Popularimg img {
+      width: 200px;   
+      height: 200px;
+      border-radius: 10px;        
+    }
+
+    .review{
+      margin-top: 5%;   
+      padding: 40px 20px;
+      background-color: #f8f4f0     
+    }
+
+    .reviewcard {
+      background-color: #fff;
+      padding: 20px 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      font-style: italic;      
+    }
+
+    .reviewcard h2{
+      color: #6b4f3f;
+      font-size: 2rem;
+    }
+
+    .reviewcard > p{
+      color: #6b4f3f;
+      font-size: 2rem;
+    }
+
+    .customer h3{
+      text-align: center;
+      font-size: 3rem;
+      font-style: italic;
+      color: #6b4f3f;
+      margin-top: 5%;      
+    }
+
+    .opentime{
+      margin-top: 5%;
+      display: flex;
+      justify-content: center; 
+      gap: 30px;
+    }
+
+    .opentime img{
+      width: 500px;
+      height: 700px;
+      border-radius: 30px;
+    }
+
+    .clickme button {
+    background-color: #8B4513;
+    color: #fff;              
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-top:130% ;   
+  }
+
+  .clickme button:hover {
+    background-color:black; 
+  }
+
+  footer{
+    background-color: #4B3621 ;
+    text-align: center;
+    padding: 20px 10px;
+    font-family: Georgia, serif;    
+    margin-top: 40px;
+  }
+
+  footer a {
+  color: burlywood;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+footer p{
+  font-size: 14px;
+}   
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="lago2.png" alt="coffee"></div>
+            <ul class="menulink">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>      
+    </header>
+
+    <section class="herosection">
+      <div class="content">
+        <h1>Start Your Day With Fresh Coffee</h1>
+          <p>Coffee is successful worldwide because it provides energy through caffeine, offers many flavors and styles, and has become a cultural and social habit. Its global trade also makes it one of the most important and profitable commodities.</p>
+        <button>Order Now</button>
+      </div>
+    </section>      
+       
+      <div>   
+        <h1 class="title">" Coffee "</h1>
+      </div>  
+
+      <div class="about1">        
+        <img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/iJ2R0A3ocUv1lNY7wFZd0f4XZmtsVrlFLI4tIeu5.jpg" alt="Espresso ">       
+        <div>
+          <h1>Espresso</h1>       
+            <p> အက်စ်ပရက်ဆို ဆ်ိုတာကတော့ ကော်ဖီရဲ့ မူရင်းအရသာအတိုင်း အဆီအနှစ်တွေချည်း ပါဝင်နေတာကြောင့် ကော်ဖီ အရသာပြင်းပြင် (ခါးခါး) ကြိုက်နှစ်သက်တဲ့သူတွေအတွက် သင့်တော်တဲ့ ကော်ဖီအမျိုးအစား ဖြစ်ပါတယ်။ မီးရှိန်ပြင်းပြင်းနဲ့ လှော်ရတဲ့ ကော်ဖီ အမျိုးအစားဖြစ်ပြီး ကော်ဖီရဲ့ အနံ့၊ အရသာ အစစ်အမှန်ကို ရရှိစေမှာ ဖြစ်ပါတယ်။        
+            </p>         
+        </div>
+      </div>
+      
+
+      <div class="about2"> 
+        <img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/BQSvT2lnRUBXg0kODsHbVbmeLBI1Kd0J8bArhRJ1.jpg" alt="Café Latte">
+        <div>
+        <h1>Café Latte</h1>
+          <p> ကော်ဖီသောက်တဲ့ သူတွေကြားမှာ လူကြိုက်များတဲ့ ကော်ဖီအမျိုးအစားတစ်ခု ဖြစ်ပါတယ်။ နွားနို့ပူပူနဲ့ ကော်ဖီကို ဖျော်စပ်ထားတဲ့ ကော်ဖီအမျိုးအစား ဖြစ်ပါတယ်။ ကော်ဖီရဲ့ အပေါ်ယံမျက်နှာပြင်မှာတော့ အမြှပ်ခပ်ပါးပါးလေး ရှိပါတယ်။ ခါးစိမ့်စိမ့် အရသာကြိုက် နှစ်သက်တဲ့ သူတွေအတွက် သင့်တော်တဲ့ ကော်ဖီအမျိုးအစားဖြစ်ပါတယ်။
+          </p>  
+        </div>        
+      </div>
+      
+      <div class="about3">         
+          <img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/mjij9P8o1cwxNs7Nbob1I3pjJbJ3xgbxrX0aX8SG.jpg" alt="Cappuccino">
+          <div>
+          <h1>Cappuccino </h1>
+            <p> ကမ္ဘာမှာ လူကြိုက်အများဆုံး ကော်ဖီအမျိုးအစားလို့ ပြောလို့ရပါတယ်။ စာဖတ်သူမြင်အောင် ပြောရရင် ဒီကော်ဖီမှာ ကိတ်မုန့်တစ်ခုလိုမျိုး အလွှာ ၃ လွှာပါဝင်ပါတယ်။ ဒီကော်ဖီထဲမှာဆိုရင် အက်စ်ပရက်ဆိုကော်ဖီ၊ နွားနို့ နဲ့ နို့ရဲ့ခရင်မ်အမြှပ် ဆိုပြီး အလွှာ ၃ လွှာပါဝင်ပါတယ်။ ကော်ဖီမျက်နှာပြင်မှာတော့ ဒီဇိုင်းပုံလှလှလေးတွေ ဖော်ပြီးအလှဆင်တာမျိုးတွေလည်း ရှိပါတယ်။ 
+            </p>
+          </div>        
+      </div>     
+
+      <div class="about4">
+        <img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/9BQEuswN5l592Xctn9PEKYLoqIFkUSwb23mkEGMU.jpg" alt="Café Mocha ">
+        <div>
+          <h1>Café Mocha</h1>
+            <p>မိုခါး ဟာဆိုရင် ချောကလက်အမှုန့်နဲ့ ကော်ဖီကို ရောစပ်ထားတဲ့ ကော်ဖီအမျိုးအစား ဖြစ်ပါတယ်။ မျက်နှာပြင်မှာတော့ ခရင်အမြှပ်လေးတွေ ပါဝင်ပါတယ်။ မိုခါးဟာဆိုရင် ကလေးတွေ ကြိုက်နှစ်သက်တဲ့ ချောကလက် အရည်ပူပူနဲ့ လူကြီးတွေ ကြိုက်နှစ်သက်တဲ့ လာ့တီး ကော်ဖီတို့ကို ရောစပ်ဖျော်ထားတာ ဖြစ်ပါတယ်။ ချိုဆိမ့်ဆိမ့် အရသာ ကြိုက်နှစ်သက်တဲ့ သူတွေအတွက် သင့်တော်တဲ့ ကော်ဖီ အမျိုးအစား ဖြစ်ပါတယ်။ 
+            </p>  
+        </div>     
+      </div>
+
+      <div class="about5">
+        <img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/WOKV5spmuGUHXtQojCYjtEFs6w8vVWSAXMeXCuWy.jpg" alt="Irish Coffee ">
+        <div>
+          <h1>Irish Coffee</h1>
+            <p> အိုင်းရစ်ရှ် ကော်ဖီကတော့ ထူးခြားပါတယ်။ သူ့ထဲမှာ ဆိုရင် ဘလက်ခ်ကော်ဖီ၊ သကြား၊ ဝီစကီ စသည်တို့ ရောစပ်ထားပြီး အပေါ်ယံ မျက်နှာပြင်မှာလည်း ခရင်မ် ပါဝင်ပါတယ်။ အိုင်းရစ်ရှ်ကော်ဖီကိုတော့ အမျိုးသားတွေ ပိုပြီးကြိုက်နှစ်သက်ကြပါတယ်။ ဆောင်းရာသီလို အေးတဲ့အချိန်မှာ သောက်ရင် ပိုသင့်တော်တဲ့ ကော်ဖီအမျိုးအစားပါ။ 
+            </p>  
+        </div>      
+      </div>
+      
+      <div class="about6">
+        <img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/1frribP0VGPSqYe1y7TY6SjUEwoA5IwJlLmZovxI.jpg" alt="Black Coffee">  
+        <div>
+          <h1>Black Coffee</h1>
+            <p>ဘလက် ကော်ဖီကတော့ ရိုးရှင်းပါတယ်။ သကြား၊ နွားနို့၊ ခရင်မ် စတာတွေ မပါပဲ ရေနွေးနဲ့ ကော်ဖီ ရောစပ်ထားတဲ့ ကော်ဖီ အမျိုးအစားတစ်ခု ဖြစ်ပါတယ်။ အကယ်၍ သင်ဟာ ကယ်လိုရီ၊ အဆီနဲ့ ကာဗွန်ဟိုက်ဒရိတ် ပါဝင်မှုနည်းတဲ့ သောက်စရာတစ်ခုကို ရှာဖွေနေတယ်ဆိုရင်တော့ ဘလက်ကော်ဖီဟာ အသင့်တော်ဆုံး ဖြစ်ပါတယ်။ 
+            </p>    
+        </div> 
+      </div>
+
+       <div class="about7">
+        <img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/exgPNzS5VbC2tPuGpeGoCNIg5JF7HkztT3L6s1mp.jpg" alt="Americano ">  
+        <div>
+          <h1>Americano </h1>
+            <p>အမေရိကာနိုဆိုတာကတော့ အက်စ်ပရက်ဆိုကော်ဖီနဲ့ ရေနွေးနဲ့ ဖျော်စပ်ထားတဲ့ ကော်ဖီအမျိုးအစားပဲ ဖြစ်ပါတယ်။ ကော်ဖီခါးခါး ကြိုက်နှစ်သက်တဲ့ သူတွေအတွက် သင့်တော်ပါတယ်။ အမေရိကာနိုဟာ ရေနွေး အနည်းငယ်ပိုထည့်ရပြီး အက်စ်ပရက်ဆိုကော်ဖီလောက် မခါးတဲ့ အရသာ ရှိပါတယ်။ 
+            </p>    
+        </div> 
+      </div> 
+
+      <h2>" Menu Board "</h2>
+      <table>
+        <tr>
+          <td>No</td>
+          <td>Name</td>
+          <td>Price</td>
+          <td>Best Seller</td>
+          <td>picture</td>
+        </tr>
+
+        <tr>
+          <td>1.</td>
+          <td>Espresso</td>
+          <td>50000/-</td>
+          <td>🌟🌟🌟</td>
+          <td> <img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/iJ2R0A3ocUv1lNY7wFZd0f4XZmtsVrlFLI4tIeu5.jpg" alt="Espresso "> </td>
+        </tr>
+
+        <tr>
+          <td>2.</td>
+          <td>Café Latte</td>
+          <td>55000/-</td>
+          <td>🌟🌟🌟</td>
+          <td><img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/BQSvT2lnRUBXg0kODsHbVbmeLBI1Kd0J8bArhRJ1.jpg" alt="Café Latte"></td>
+
+        </tr>
+
+        <tr>
+          <td>3.</td>
+          <td>Cappuccino</td>
+          <td>55000/-</td>
+          <td>🌟🌟🌟</td>
+          <td><img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/mjij9P8o1cwxNs7Nbob1I3pjJbJ3xgbxrX0aX8SG.jpg" alt="Cappuccino"></td>
+        </tr>
+
+        <tr>
+          <td>4.</td>
+          <td>Café Mocha</td>
+          <td>55000/-</td>
+          <td>🌟🌟🌟</td>
+          <td><img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/9BQEuswN5l592Xctn9PEKYLoqIFkUSwb23mkEGMU.jpg" alt="Café Mocha "></td>
+        </tr>
+
+         <tr>
+          <td>5.</td>
+          <td>Irish Coffee</td>
+          <td>55000/-</td>
+          <td>🌟🌟🌟</td>
+          <td><img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/WOKV5spmuGUHXtQojCYjtEFs6w8vVWSAXMeXCuWy.jpg" alt="Irish Coffee "></td>
+        </tr>
+
+        <tr>
+          <td>6.</td>
+          <td>Black Coffee</td>
+          <td>60000/-</td>
+          <td>🌟🌟🌟</td>
+          <td><img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/1frribP0VGPSqYe1y7TY6SjUEwoA5IwJlLmZovxI.jpg" alt="Black Coffee"> </td>
+        </tr>
+
+        <tr>
+          <td>7.</td>
+          <td>Americano</td>
+          <td>50000/-</td>
+          <td>🌟🌟🌟</td>
+          <td><img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/exgPNzS5VbC2tPuGpeGoCNIg5JF7HkztT3L6s1mp.jpg" alt="Americano ">  </td>
+        </tr>
+      </table>
+
+      <div><h3 id="PopularMenu">" Popular Coffee Menu " </h3></div>
+
+      <section class="PopularCoffee">
+        <div>          
+            <div class="Popularimg">
+              <img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/iJ2R0A3ocUv1lNY7wFZd0f4XZmtsVrlFLI4tIeu5.jpg" alt="Espresso ">
+              <div><h1>Espresso</h1></div>
+              <div><h1>🌟🌟🌟</h1></div>
+            </div>
+
+             <div class="Popularimg">
+              <img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/1frribP0VGPSqYe1y7TY6SjUEwoA5IwJlLmZovxI.jpg" alt="Black Coffee">
+              <div><h1>Black Coffee</h1></div>
+              <div><h1>🌟🌟🌟</h1></div>
+            </div>
+
+            <div class="Popularimg">
+              <img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/BQSvT2lnRUBXg0kODsHbVbmeLBI1Kd0J8bArhRJ1.jpg" alt="Café Latte">
+              <div><h1>Café Latte</h1></div>
+              <div><h1>🌟🌟🌟</h1></div>
+            </div>
+
+            <div class="Popularimg">
+              <img src="https://greenway.sgp1.digitaloceanspaces.com/editor_images/July2020/9BQEuswN5l592Xctn9PEKYLoqIFkUSwb23mkEGMU.jpg" alt="Café Mocha ">
+              <div><h1>Café Mocha</h1></div>
+              <div><h1>🌟🌟🌟</h1></div>
+            </div>
+        </div>
+      </section>
+
+
+      <div class="customer">
+        <h3>" Customer Review "</h3>
+      </div>
+
+      <section class="review">
+        <div class="reviewcard">
+          <p>
+            “Espresso က အံ့ဩဖွယ်! Café Latte နဲ့ Black Coffee လည်း အရသာကောင်းပြီး friendly staff တွေကြောင့် cozy atmosphere ရှိပါတယ်။ Café Mocha ရဲ့ chocolate flavor က rich & creamy ဖြစ်ပြီး Instagram-worthy ပါ။ Definitely coming back! ☕🌟”
+          </p>
+          <h2> Thank - John D.</h2>
+        </div>
+      </section>
+
+
+      <div class="opentime">
+        <div>
+        <img src="https://template.canva.com/EAFNIroOHeE/2/0/900w-NOwCWBasuPM.jpg" alt="coffee">
+        </div>
+
+        <div class="clickme">
+          <button type="button" onclick="">Subscribed Successfully!</button>
+        </div>
+      </div>     
+
+      <footer>
+        <p>
+          ©Sunrise Brew. ကျွန်ုပ်တို့၏ ကော်ဖီဆိုင်သည် ၂၀၂၀ ခုနှစ်မှ စတင်၍ အရသာမြင့်မားသည့် ကော်ဖီများကို ပေးဆောင်နေပါသည်။ ကျွန်ုပ်တို့၏ ရည်ရွယ်ချက်မှာ အရည်အသွေးမြင့်မားပြီး သန့်ရှင်းသော ကော်ဖီအရသာများကို ဖောက်သည်များထံ လက်လှမ်းမီစေခြင်းဖြစ်သည်။
+          ကျွန်ုပ်တို့သည် သဘာဝနဲ့ ကိုက်ညီသော ကော်ဖီစိမ်းများကို သောက်သုံးပြီး ဖောက်သည်များအား ကျေနပ်မှု၊ အပန်းဖြေမှု ရရှိစေခြင်းကို ဦးတည်ပါသည်။
+        </p>
+            <p>ဆက်သွယ်ရန် - ဖုန်း: 09-4545452, အီးမေးလ်: info@Sunrise Brew.com
+            </p>
+              <p>
+                <a href="#">Home</a> | <a href="#">Products</a> | <a href="#">Contact</a>
+              </p>
+      </footer>   
+    
+</body>
+</html>
